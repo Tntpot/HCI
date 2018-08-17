@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" class="wrapper">
+
+  <div class="header">
+    <a routerLink="/index">
+      <img src="assets/images/medical_logo.jpg" />
+    </a>
+    <div class="header-top">
+      <p class="title"> Ulster Clinic Medical Bookings</p>
+    </div>
+    <div class="header-bottom">
+      <ul class="navbar">
+        <ng-container *ngFor="let item of NavItems">
+          <app-nav-item [text]="item.text" [icon]="item.icon" [route]="item.route"></app-nav-item>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="footer">
+  </div>
+</div>

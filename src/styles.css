@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto');
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+html {
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+html,
+body {
+  background-color: #F5F5F6;
+  color: #000000;
+  margin: 0px;
+  height: 100%;
+}
+
+/* CSS Grid Layout */
+
+.header-top {
+  grid-area: ht;
+}
+
+.header-bottom {
+  grid-area: hb;
+  background-color: #fff;
+}
+
+.menu {
+  display: grid;
+  grid-area: menu;
+  background-color: #8678c2;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.navbar {
+  grid-area: nav;
+}
+
+.content {
+  grid-area: cnt;
+}
+
+.footer {
+  grid-area: ft;
+}
+
+.header-top {
+  line-height: 2em;
+  border: 2px solid black;
+  margin: 40px;
+  margin-bottom: 0px;
+  margin-left: -30px;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav .";
+  max-height: 5%;
+}
+
+.header {
+  grid-area: hd;
+  display: grid;
+  color: black;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-template-areas: ". ht ht ht ht ht ht ." "hb hb hb hb hb hb hb hb"
+}
+
+.header,
+.header-top,
+.header-bottom {
+  background-color: #ffffff;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-gap: 5px; */
+  grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" ". cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt ." ". ft ft ft ft ft ft ft ft ft ft .";
+  height: 100%;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 0px;
+}
+
+ul.navbar li {
+  border: 1px solid black;
+}
+
+ul.navbar li a {
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px solid transparent;
+}
+
+ul.navbar li a:hover {
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+
+/* Content Styles */
+
+.content {
+  padding: 10px;
+  min-height: 500px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.footer {
+  background-color: #ffffff;
+}
+
+a>img {
+  height: 100px;
+  margin: 30px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+/* List Styles */
+
+div.menu>ul {
+  margin: 0.5em;
+  padding: 0.1em;
+}
+
+ul li.li-inline {
+  display: inline-block;
+}
+
+ul li {
+  min-height: 3em;
+  line-height: 3em;
+  vertical-align: middle;
+}
+
+/* Text Styles */
+
+p.title {
+  font-size: 4vw;
+}
+
+/* Font Awesome */
+
+i.fa {
+  padding-right: 2px;
+}
+
+/** Mobile Layout **/
+
+@media screen and (max-width: 680px) {
+  .wrapper {
+    grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" "menu menu menu menu menu menu menu menu menu menu menu menu" "cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt" "ft ft ft ft ft ft ft ft ft ft ft ft"
+  }
+  ul {
+    list-style-type: none;
+  }
+  .header h1 {
+    font-size: 2em;
+  }
+  .header p.title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  p.title {
+    font-size: 1.5em;
+  }
+  .header-top {
+    margin-top: 20px;
+  }
+  a>img {
+    margin: 20px;
+    margin-bottom: 0px;
+    height: 4em;
+    min-height: 75px;
+  }
+  ul li {
+    min-height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+  }
+}
